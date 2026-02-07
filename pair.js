@@ -1,5 +1,6 @@
 /*
 mongodb+srv://gotukola299:gotukola299wha@cluster0.2jmy2zs.mongodb.net/
+mongodb+srv://Cripto123:Cripto2008%23@cluster0.rgpxriu.mongodb.net/
 
 https://files.catbox.moe/t8q43h.jpeg
 
@@ -117,7 +118,7 @@ const Session = mongoose.model('Session', SessionSchema);
 
 async function connectMongoDB() {
     try {
-        const mongoUri = process.env.MONGO_URI || 'mongodb+srv://gotukola299:gotukola299wha@cluster0.2jmy2zs.mongodb.net/dtztfmkuck012?appName=Cluster0';
+        const mongoUri = process.env.MONGO_URI || 'mongodb+srv://Cripto123:Cripto2008%23@cluster0.rgpxriu.mongodb.net/dtztfmkuck012?appName=Cluster0';
         await mongoose.connect(mongoUri, {
             useNewUrlParser: true,
             useUnifiedTopology: true
