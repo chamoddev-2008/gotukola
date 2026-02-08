@@ -2759,11 +2759,11 @@ await socket.sendMessage(sender, buttonMessage, { quoted: dtzminibot });
 break;
 }
                 
+
 case 'menu': {
-    
-    await socket.sendMessage(sender, {
+	await socket.sendMessage(sender, {
         react: {
-            text: '📍',
+            text: '🍀',
             key: msg.key
         }
     });
@@ -2777,10 +2777,10 @@ case 'menu': {
 
     const hour = slstDate.getHours();
     const greetings =
-        hour < 12 ? '*`සුභ උදෑසනක් 🌄`*' :
-        hour < 17 ? '*`සුභ දහවලක් 🏞️`*' :
-        hour < 20 ? '*`සුභ හැන්දෑවක් 🌅`*' :
-        '*`සුභ රාත්‍රියක් 🌌`*';
+        hour < 12 ? '`ගුඩ් මෝනිම් 👀`' :
+        hour < 17 ? '`දවල් වෙලා නේ 😌`' :
+        hour < 20 ? '`හවස් වෙලා නේ 🥱`' :
+        '`නිදාගනිම් ගිහිම් 🫩`';
 
     const startTime = socketCreationTime.get(number) || Date.now();
     const uptime = Math.floor((Date.now() - startTime) / 1000);
@@ -2788,176 +2788,100 @@ case 'menu': {
     const minutes = Math.floor((uptime % 3600) / 60);
     const seconds = Math.floor(uptime % 60);
     const uptimeFormatted = `${hours}h ${minutes}m ${seconds}s`;
+    
+    const captionText = `*╭━━━━━❮❮ 🍀✨ ❯❯━━━━━➤*
+*┆කොළපාට අලුත් බලවේගේ 😼*
+*╰━━━━━━━━━━━━━━━━━━➤*
 
-    let teksnya = `_*Ｗᴇʟᴄᴏᴍᴇ Ｔᴏ Ｄᴛᴢ Ｍɪɴɪ Ｂᴏᴛ ☃️*_
-*╭───────────────┈⊷*
-*┊• 🖼️ \`ɢʀᴇᴇᴛ\` :-* ${greetings}
-*┊• ⏰ \`ᴛɪᴍᴇ\` :-* *${formattedTime}*
-*┊• 📅 \`ᴅᴀᴛᴇ\` :-* *${formattedDate}*
-*┊• 🎭 \`ʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ\` :-* *ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ*
-*┊• 📍 \`ᴀᴄᴛɪᴠᴇ ꜱᴇꜱꜱɪᴏɴꜱ\` :-* *${activeSockets.size}*
-*╰───────────────┈⊷*
+ℹ️ *ආ බොසා..!*
+> *${greetings}*
+*╭━━━━━━━━━━━━━━━━━━➤*
+*┣➤🍀 \`මහGay\` ┆* *HEROKU*
+*┣➤🍀 \`වෙලාව\` ┆* *${formattedTime}*
+*┣➤🍀 \`දිනය\` ┆* *${formattedDate}*
+*┣➤🍀 \`මගෙ උන් ගාන\` ┆* *${activeSockets.size}*
+*╰━━━━━━━━━━━━━━━━━━➤*
+*හලෝ...!👋 මම තමා ~ගොටුකොලයා✨🍀~ ආයි ඉතින් මල් කෑල්ල වගේ🔥🌸 \`චමෝද් ඇත්තෝගේ 🗿\` කුපිරි බොටා 👑🧑‍💻*`;
 
-*ʜᴇʟʟᴏ ʙʀᴏ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴅᴛᴢ ᴍɪɴɪ ʙᴏᴛ ☃️ , ᴀ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴘᴏᴡᴇʀꜰᴜʟ ꜰʀᴇᴇ ʙᴏᴛ. ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ ᴛᴇᴀᴍ ( ᴅᴛᴢ ɢᴀɴɢ ).*📬
-
-*🌐 DTZ MINI BOT Website :*
-> ${config.PAIR}\n`;
-
-    await socket.sendMessage(sender, {
-        interactiveMessage: {
-            title: teksnya,
-            footer: `*© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ ᴛᴇᴀᴍ -*`,
-            thumbnail: "https://i.ibb.co/0VV8rBP5/tourl-1765852887627.jpg",
-            nativeFlowMessage: {
-                messageParamsJson: JSON.stringify({
-                    limited_time_offer: {
-                        text: "H ᴇʟʟᴏᴡ ❤️",
-                        url: "https://www.darktechzone.site/",
-                        copy_code: "ᴏᴡɴᴇʀꜱ : ᴀꜱʜᴜᴜ & ᴅɪɴᴀ",
-                        expiration_time: Date.now() * 999
-                    },
-                    bottom_sheet: {
-                        in_thread_buttons_limit: 2,
-                        divider_indices: [1, 2, 3, 4, 5, 999],
-                        list_title: "𝐃ᴀʀᴋ 𝐓ᴇᴄʜ 𝐙ᴏɴᴇ",
-                        button_title: "𝐒ᴇʟᴇᴄᴛ 𝐌ᴇɴᴜ"
-                    }
-                }),
-                buttons: [
-                {
-                            name: "single_select",
-                            buttonParamsJson: JSON.stringify({ has_multiple_buttons: true
-
- })
-                        },
-                    {
-                        name: "cta_url",
-                        buttonParamsJson: JSON.stringify({
-                            display_text: "𝐉ᴏɪɴ 𝐂ʜᴀɴɴᴇʟ",
-                            url: "https://whatsapp.com/channel/0029Vb5lyTTE50UljDvt993M"
-                        })
-                    },
-                    {
-                        name: "single_select",
-                        buttonParamsJson: JSON.stringify({
-                            title: "𝐃ᴛᴢ 𝐌ɪɴɪ 𝐁ᴏᴛ ᴠ3 ☃️ ",
-                            sections: [
+    const templateButtons = [
+        {
+            buttonId: `${config.PREFIX}alive`,
+            buttonText: { displayText: '📌 අලව්ව' },
+            type: 1,
+        },
+        {
+            buttonId: `${config.PREFIX}owner`,
+            buttonText: { displayText: '🗿 මහ ඇත්තෝ ' },
+            type: 1,
+        },
+        {
+            buttonId: 'action',
+            buttonText: {
+                displayText: '📄 ඕනී මොකක්ද'
+            },
+            type: 4,
+            nativeFlowInfo: {
+                name: 'single_select',
+                paramsJson: JSON.stringify({
+                    title: '📄 ඕනී මොකක්ද ?',
+                    sections: [
+                        {
+                            title: `මේක දකින එකා ගොටුකොලයෙක්`,
+                            highlight_label: 'ටොප් බඩු',
+                            rows: [
                                 {
-                                    title: "𝐌ᴀɪɴ 𝐂ᴀᴛᴇɢᴏʀɪᴇꜱ",
-                                    highlight_label: "𝐃ᴛᴢ 𝐌ɪɴɪ 𝐁ᴏᴛ ᴠ𝟑",
-                                    rows: [
-                                        {
-                                            header: "🎮 𝐌ᴀɪɴ 𝐌ᴇɴᴜ",
-                                            title: "𝐌ᴀɪɴ 𝐌ᴇɴᴜ",
-                                            description: "View all main commands",
-                                            id: `${config.PREFIX}mainmenu`
-                                        },
-                                        {
-                                            header: "🎌 𝐀ɴɪᴍᴇ 𝐌ᴇɴᴜ",
-                                            title: "𝐀ɴɪᴍᴇ 𝐌ᴇɴᴜ",
-                                            description: "Anime related commands",
-                                            id: `${config.PREFIX}animemenu`
-                                        },
-                                        {
-                                            header: "📥 𝐃ᴏᴡɴʟᴏᴀᴅ 𝐌ᴇɴᴜ",
-                                            title: "𝐃ᴏᴡɴʟᴏᴀᴅ 𝐌ᴇɴᴜ",
-                                            description: "Download media from various platforms",
-                                            id: `${config.PREFIX}downmenu`
-                                        },
-                                        {
-                                            header: "👥 𝐆ʀᴏᴜᴘ 𝐌ᴇɴᴜ",
-                                            title: "𝐆ʀᴏᴜᴘ 𝐌ᴇɴᴜ",
-                                            description: "Group management commands",
-                                            id: `${config.PREFIX}groupmenu`
-                                        },
-                                        {
-                                            header: "🎭 𝐅ᴜɴ 𝐌ᴇɴᴜ",
-                                            title: "𝐅ᴜɴ 𝐌ᴇɴᴜ",
-                                            description: "Entertainment and fun commands",
-                                            id: `${config.PREFIX}funmenu`
-                                        },
-                                        {
-                                            header: "📰 𝐍ᴇᴡꜱ 𝐌ᴇɴᴜ",
-                                            title: "𝐍ᴇᴡꜱ 𝐌ᴇɴᴜ",
-                                            description: "Get latest news updates",
-                                            id: `${config.PREFIX}newsmenu`
-                                        },
-                                        {
-                                            header: "🔄 𝐂ᴏɴᴠᴇʀᴛ 𝐌ᴇɴᴜ",
-                                            title: "𝐂ᴏɴᴠᴇʀᴛ 𝐌ᴇɴᴜ",
-                                            description: "Convert files and media",
-                                            id: `${config.PREFIX}convertmenu`
-                                        },
-                                        {
-                                            header: "👑 𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ",
-                                            title: "𝐎ᴡɴᴇʀ 𝐌ᴇɴᴜ",
-                                            description: "Owner only commands",
-                                            id: `${config.PREFIX}ownermenu`
-                                        },
-                                        {
-                                            header: "🔍 𝐒ᴇᴀʀᴄʜ 𝐌ᴇɴᴜ",
-                                            title: "𝐒ᴇᴀʀᴄʜ 𝐌ᴇɴᴜ",
-                                            description: "Search anything you want",
-                                            id: `${config.PREFIX}searchmenu`
-                                        }
-                                    ]
+                                    title: '1️⃣.ප්‍රදාන එව්වා 🪯',
+                                    description: 'MAIN CMDS',
+                                    id: `${config.PREFIX}menu1`,
                                 },
                                 {
-                                    title: "𝐔ᴛɪʟɪᴛɪᴇꜱ",
-                                    highlight_label: "𝐃ᴛᴢ 𝐌ɪɴɪ 𝐁ᴏᴛ ᴠ3",
-                                    rows: [
-                                        {
-                                            header: "🏓 𝐏ɪɴɢ",
-                                            title: "𝐏ɪɴɢ",
-                                            description: "Check bot speed",
-                                            id: `${config.PREFIX}ping`
-                                        },
-                                        {
-                                            header: "💚 𝐀ʟɪᴠᴇ",
-                                            title: "𝐀ʟɪᴠᴇ",
-                                            description: "Check bot status",
-                                            id: `${config.PREFIX}alive`
-                                        },
-                                        {
-                                            header: "⚙️𝐒ᴇᴛᴛɪɴɢꜱ",
-                                            title: "𝐒ᴇᴛᴛɪɴɢꜱ",
-                                            description: "Check bot settings",
-                                            id: `${config.PREFIX}st`
-                                        },
-                                        {
-                                            header: "🚀 𝐒ʏꜱᴛᴇᴍ",
-                                            title: "𝐒ʏꜱᴛᴇᴍ",
-                                            description: "Check bot system",
-                                            id: `${config.PREFIX}system`
-                                        }
-                                    ]
-                                }
-                            ]
-                        })
-                    },
-                    {
-                        name: "quick_reply",
-                        buttonParamsJson: JSON.stringify({
-                            display_text: "𝐒ᴇᴛᴛɪɴɢ 𝐂ᴍᴅ 📌",
-                            id: `${config.PREFIX}dtz`
-                        })
-                    },
-                    {
-                        name: "cta_copy",
-                        buttonParamsJson: JSON.stringify({
-                            display_text: "𝐂ᴏᴘʏ 𝐁ᴏᴛ 𝐖ᴇʙ 𝐋ɪɴᴋ",
-                            copy_code: "*~https://www.darktechzone.site/~*"
-                        })
-                    }
-                ]
-            }
+                                    title: '2️⃣.බාගන්න ඕනී එව්වා 📥',
+                                    description: 'DOWNLORD CMDS',
+                                    id: `${config.PREFIX}menu2`,
+                                },
+								{
+                                    title: '3️⃣.ආතල් එව්වා 🔥',
+                                    description: 'FUN CMDS',
+                                    id: `${config.PREFIX}menu3`,
+                                },
+								{
+                                    title: '4️⃣.ජිංගි ජිල් එව්වා 🔞',
+                                    description: '18+ CMDS',
+                                    id: `${config.PREFIX}menu4`,
+                                },
+								{
+                                    title: '5️⃣.සමූහ එව්වා 🫂',
+                                    description: 'GROUP CMDS',
+                                    id: `${config.PREFIX}menu5`,
+                                },
+							    {
+                                    title: '6️⃣.ඕනර්gay එව්වා',
+                                    description: 'OWNER CMDS',
+                                    id: `${config.PREFIX}menu6`,
+                                },
+								{
+                                    title: '7️⃣.අමතර එව්වා 📍',
+                                    description: 'OTHERS CMDS',
+                                    id: `${config.PREFIX}menu7`,
+                                },
+                            ],
+                        },
+                    ],
+                }),
+            },
         }
-    }, {
-        quoted: dtzminibot
-    });
+    ];
+
+    await socket.sendMessage(m.chat, {
+        buttons: templateButtons,
+        headerType: 1,
+        viewOnce: true,
+        image: { url: "https://files.catbox.moe/t8q43h.jpeg" },
+        caption: `*\`Ｃʜᴀᴅ Ｇᴏᴛᴜᴋᴏʟᴀ ㄚᴀᴋᴏᴏᴡ...!\`*\n${captionText}`,
+    }, { quoted: dtzminibot });
 
     break;
-}
+}          
 
                 case 'downmenu': {
                     await socket.sendMessage(sender, {
